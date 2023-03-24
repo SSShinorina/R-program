@@ -12,14 +12,16 @@ library(ggplot2)
 library(psych)
 
 ### creating block sparse matrix with 3 different block matrices.
-a = matrix(1:50, 15,15)
+a = matrix(1:25, 15,15)
 diag(a)=1
 a=forceSymmetric(a)
 a
+
 b = matrix(10:50, 10,10)
 diag(b)=15
 b=forceSymmetric(b)
 b
+
 c = matrix(20:50, 25,25)
 diag(c)=30
 c=forceSymmetric(c)
@@ -32,6 +34,15 @@ plot(sM)
 true_cor = cov2cor(sM)
 true_network <- graph_from_adjacency_matrix( true_cor, weighted=T, mode="undirected", diag=F)
 true_member = cluster_edge_betweenness(true_network)
+dev.off()
+par(bg="black", mar=c(0,0,0,0))
+plot(true_network,vertex.size=12,
+     vertex.color="green", 
+     vertex.label.cex=0.7,
+     vertex.label.color="blue",
+     vertex.frame.color="transparent") 
+membership(true_member) 
+plot(true_member,true_network)
 
 ##sample data
 set.seed(123)
@@ -58,18 +69,17 @@ center_corr
 center_corr[center_corr<0.9]<-0
 center_corr[center_corr>=0.9]<-1
 heatmap(center_corr)
-corrplot(center_corr[1:25,1:25], addCoef.col="white",number.cex=0.75)
-corrplot(center_corr[26:50,26:50], addCoef.col="white")
-corPlot(center_corr[1:25,1:25])
-corPlot(center_corr[26:50,26:50])
-network <- graph_from_adjacency_matrix( center_corr, weighted=T, mode="undirected", diag=F)
+dev.off()
+corrplot(center_corr , addCoef.col="pink",number.cex=0.55)
 
+network <- graph_from_adjacency_matrix( center_corr, weighted=T, mode="undirected", diag=F)
+dev.off()
 
 par(bg="black", mar=c(0,0,0,0))
 plot(network,vertex.size=12,
      vertex.color="green", 
      vertex.label.cex=0.7,
-     vertex.label.color="white",
+     vertex.label.color="blue",
      vertex.frame.color="transparent") 
 
 center_member = cluster_edge_betweenness(network)
@@ -80,15 +90,14 @@ wc_corr
 wc_corr[wc_corr<0.9] <- 0
 wc_corr[wc_corr>=0.9] <- 1
 dev.off()
-par(mar = c(1, 1, 1, 1))
-corPlot(wc_corr)
+corrplot(wc_corr , addCoef.col="pink",number.cex=0.55)
 wc_network <- graph_from_adjacency_matrix( wc_corr, weighted=T, mode="undirected", diag=F)
-
+dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(wc_network,vertex.size=12,
      vertex.color="green", 
      vertex.label.cex=0.7,
-     vertex.label.color="white",
+     vertex.label.color="blue",
      vertex.frame.color="transparent")
 
 wc_member = cluster_edge_betweenness(wc_network)

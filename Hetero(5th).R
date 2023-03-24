@@ -712,9 +712,9 @@ center_corr
 #network
 center_corr[center_corr<0.9] <- 0
 center_corr[center_corr>=0.9] <- 1
-dev.off()
 corrplot(center_corr , addCoef.col="pink",number.cex=0.55)
 network <- graph_from_adjacency_matrix( center_corr, weighted=T, mode="undirected", diag=F)
+
 dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(network,vertex.size=12,
@@ -743,6 +743,7 @@ wc_corr[wc_corr>=0.9] <- 1
 dev.off()
 corrplot(wc_corr , addCoef.col="pink",number.cex=0.55)
 wc_network <- graph_from_adjacency_matrix( wc_corr, weighted=T, mode="undirected", diag=F)
+
 dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(wc_network,vertex.size=12,

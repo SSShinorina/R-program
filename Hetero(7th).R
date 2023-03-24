@@ -708,13 +708,14 @@ center_data = rbind(cen_1,cen_2,cen_3,cen_4,cen_5,cen_6,cen_7,cen_8,cen_9,cen_10
 center_data
 center_corr = cor(center_data,method="pearson")
 center_corr
+dev.off()
 
 #network
 center_corr[center_corr<0.9] <- 0
 center_corr[center_corr>=0.9] <- 1
-dev.off()
 corrplot(center_corr , addCoef.col="pink",number.cex=0.55)
 network <- graph_from_adjacency_matrix( center_corr, weighted=T, mode="undirected", diag=F)
+
 dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(network,vertex.size=12,
@@ -742,7 +743,9 @@ wc_corr[wc_corr<0.9] <- 0
 wc_corr[wc_corr>=0.9] <- 1
 dev.off()
 corrplot(wc_corr , addCoef.col="pink",number.cex=0.55)
+
 wc_network <- graph_from_adjacency_matrix( wc_corr, weighted=T, mode="undirected", diag=F)
+
 dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(wc_network,vertex.size=12,

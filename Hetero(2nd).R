@@ -708,19 +708,18 @@ center_data = rbind(cen_1,cen_2,cen_3,cen_4,cen_5,cen_6,cen_7,cen_8,cen_9,cen_10
 center_data
 center_corr = cor(center_data,method="pearson")
 center_corr
-dev.off()
-par(mar = c(1, 1, 1, 1))
-corPlot(center_corr)
+
 #network
 center_corr[center_corr<0.9] <- 0
 center_corr[center_corr>=0.9] <- 1
+corrplot(center_corr , addCoef.col="pink",number.cex=0.55)
 network <- graph_from_adjacency_matrix( center_corr, weighted=T, mode="undirected", diag=F)
-
+dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(network,vertex.size=12,
      vertex.color="green", 
      vertex.label.cex=0.7,
-     vertex.label.color="white",
+     vertex.label.color="blue",
      vertex.frame.color="transparent") 
 
 het_center = cluster_edge_betweenness(network)
@@ -741,15 +740,14 @@ wc_corr
 wc_corr[wc_corr<0.9] <- 0
 wc_corr[wc_corr>=0.9] <- 1
 dev.off()
-par(mar = c(1, 1, 1, 1))
-corPlot(wc_corr)
+corrplot(wc_corr , addCoef.col="pink",number.cex=0.55)
 wc_network <- graph_from_adjacency_matrix( wc_corr, weighted=T, mode="undirected", diag=F)
-
+dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(wc_network,vertex.size=12,
      vertex.color="green", 
      vertex.label.cex=0.7,
-     vertex.label.color="pink",
+     vertex.label.color="blue",
      vertex.frame.color="transparent")
 
 het_non_center = cluster_edge_betweenness(wc_network)

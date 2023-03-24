@@ -6,7 +6,7 @@ heta_data = split(sample_data, factor(sort(rank(row.names(sample_data))%%n)))
 heta_data
 
 #sub-experiment1
-omega=t(runif(50))
+omega=t(sample(1:50))
 omega
 e1=heta_data[[1]][1,]+omega
 e11=heta_data[[1]][2,]+omega
@@ -20,7 +20,7 @@ center_colmeans <- function(x) {
 cen_1=center_colmeans(sub1)
 
 #sub-experiment2
-omega2=t(runif(50,min=-10,max=10))
+omega2=t(sample(0:49))
 omega2
 e2=heta_data[[2]][1,]+omega2
 e22=heta_data[[2]][2,]+omega2
@@ -34,7 +34,7 @@ center_colmeans <- function(x) {
 cen_2=center_colmeans(sub2)
 
 #sub-experiment3
-omega3=t(runif(50,min=-5,max=5))
+omega3=t(sample(10:59))
 omega3
 e3=heta_data[[3]][1,]+omega3
 e33=heta_data[[3]][2,]+omega3
@@ -48,7 +48,7 @@ center_colmeans <- function(x) {
 cen_3=center_colmeans(sub3)
 
 #sub-experiment4
-omega4=t(runif(50,min=0,max=7))
+omega4=t(sample(5:54))
 omega4
 e4=heta_data[[4]][1,]+omega4
 e44=heta_data[[4]][2,]+omega4
@@ -62,7 +62,7 @@ center_colmeans <- function(x) {
 cen_4=center_colmeans(sub4)
 
 #sub-experiment5
-omega5=t(runif(50,min=5,max=10))
+omega5=t(sample(3:52))
 omega5
 e5=heta_data[[5]][1,]+omega5
 e55=heta_data[[5]][2,]+omega5
@@ -76,7 +76,7 @@ center_colmeans <- function(x) {
 cen_5=center_colmeans(sub5)
 
 #sub-experiment6
-omega6=t(runif(50,min=1,max=5))
+omega6=t(sample(20:69))
 omega6
 e6=heta_data[[6]][1,]+omega6
 e66=heta_data[[6]][2,]+omega6
@@ -90,7 +90,7 @@ center_colmeans <- function(x) {
 cen_6=center_colmeans(sub6)
 
 #sub-experiment7
-omega7=t(runif(50,min=-5,max=5))
+omega7=t(sample(17:66))
 omega7
 e7=heta_data[[7]][1,]+omega7
 e77=heta_data[[7]][2,]+omega7
@@ -114,7 +114,7 @@ center_colmeans <- function(x) {
 cen_8=center_colmeans(sub8)
 
 #sub-experiment 9
-omega9=t(runif(50,min=1,max=3))
+omega9=t(sample(-10:39))
 omega9
 e9=heta_data[[9]][1,]+omega9
 e99=heta_data[[9]][2,]+omega9
@@ -128,7 +128,7 @@ center_colmeans <- function(x) {
 cen_9=center_colmeans(sub9)
 
 #sub-experiment 10
-omega10=t(runif(50,min=3,max=7))
+omega10=t(sample(-5:44))
 omega10
 e10=heta_data[[10]][1,]+omega10
 e110=heta_data[[10]][2,]+omega10
@@ -142,7 +142,7 @@ center_colmeans <- function(x) {
 cen_10=center_colmeans(sub10)
 
 #sub-experiment 11
-omega11=t(runif(50,min=-8,max=8))
+omega11=t(sample(-1:48))
 omega11
 e11=heta_data[[11]][1,]+omega11
 e111=heta_data[[11]][2,]+omega11
@@ -156,7 +156,7 @@ center_colmeans <- function(x) {
 cen_11=center_colmeans(sub11)
 
 #sub-experiment 12
-omega12=t(runif(50,min=-3,max=3))
+omega12=t(sample(-15:34))
 omega12
 e12=heta_data[[12]][1,]+omega12
 e112=heta_data[[12]][2,]+omega12
@@ -170,7 +170,7 @@ center_colmeans <- function(x) {
 cen_12=center_colmeans(sub12)
 
 #sub-experiment 13
-omega13=t(runif(50,min=-5,max=5))
+omega13=t(sample(-6:43))
 omega13
 e13=heta_data[[13]][1,]+omega13
 e113=heta_data[[13]][2,]+omega13
@@ -184,7 +184,7 @@ center_colmeans <- function(x) {
 cen_13=center_colmeans(sub13)
 
 #sub-experiment 14
-omega14=t(runif(50,min=-2,max=2))
+omega14=t(sample(7:56))
 omega14
 e14=heta_data[[14]][1,]+omega14
 e114=heta_data[[14]][2,]+omega14
@@ -198,7 +198,7 @@ center_colmeans <- function(x) {
 cen_14=center_colmeans(sub14)
 
 #sub-experiment 15
-omega15=t(runif(50,min=-4,max=4))
+omega15=t(sample(0:49))
 omega15
 e15=heta_data[[15]][1,]+omega15
 e115=heta_data[[15]][2,]+omega15
@@ -212,7 +212,7 @@ center_colmeans <- function(x) {
 cen_15=center_colmeans(sub15)
 
 #sub-experiment 16
-omega16=t(runif(50,min=1,max=12))
+omega16=t(sample(3:52))
 omega16
 e16=heta_data[[16]][1,]+omega16
 e116=heta_data[[16]][2,]+omega16
@@ -226,7 +226,7 @@ center_colmeans <- function(x) {
 cen_16=center_colmeans(sub16)
 
 #sub-experiment 17
-omega17=t(runif(50,min=2,max=9))
+omega17=t(sample(-3:46))
 omega17
 e17=heta_data[[17]][1,]+omega17
 e117=heta_data[[17]][2,]+omega17
@@ -240,7 +240,7 @@ center_colmeans <- function(x) {
 cen_17=center_colmeans(sub17)
 
 #sub-experiment 18
-omega18=t(runif(50,min=4,max=12))
+omega18=t(sample(4:53))
 omega18
 e18=heta_data[[18]][1,]+omega18
 e118=heta_data[[18]][2,]+omega18
@@ -254,7 +254,7 @@ center_colmeans <- function(x) {
 cen_18=center_colmeans(sub18)
 
 #sub-experiment 19
-omega19=t(runif(50,min=3,max=8))
+omega19=t(sample(-4:45))
 omega19
 e19=heta_data[[19]][1,]+omega19
 e119=heta_data[[19]][2,]+omega19
@@ -268,7 +268,7 @@ center_colmeans <- function(x) {
 cen_19=center_colmeans(sub19)
 
 #sub-experiment 20
-omega20=t(runif(50,min=3,max=13))
+omega20=t(sample(-20:29))
 omega20
 e20=heta_data[[20]][1,]+omega20
 e120=heta_data[[20]][2,]+omega20
@@ -282,7 +282,7 @@ center_colmeans <- function(x) {
 cen_20=center_colmeans(sub20)
 
 #sub-experiment 21
-omega21=t(runif(50,min=2,max=11))
+omega21=t(sample(-16:33))
 omega21
 e21=heta_data[[21]][1,]+omega21
 e121=heta_data[[21]][2,]+omega21
@@ -296,7 +296,7 @@ center_colmeans <- function(x) {
 cen_21=center_colmeans(sub21)
 
 #sub-experiment 22
-omega22=t(runif(50,min=6,max=10))
+omega22=t(sample(16:65))
 omega22
 e22=heta_data[[22]][1,]+omega22
 e122=heta_data[[22]][2,]+omega22
@@ -310,7 +310,7 @@ center_colmeans <- function(x) {
 cen_22=center_colmeans(sub22)
 
 #sub-experiment 23
-omega23=t(runif(50,min=4,max=8))
+omega23=t(sample(-20:29))
 omega23
 e23=heta_data[[23]][1,]+omega23
 e123=heta_data[[23]][2,]+omega23
@@ -324,7 +324,7 @@ center_colmeans <- function(x) {
 cen_23=center_colmeans(sub23)
 
 #sub-experiment 24
-omega24=t(runif(50,min=0,max=6))
+omega24=t(sample(-18:31))
 omega24
 e24=heta_data[[24]][1,]+omega24
 e124=heta_data[[24]][2,]+omega24
@@ -338,7 +338,7 @@ center_colmeans <- function(x) {
 cen_24=center_colmeans(sub24)
 
 #sub-experiment 25
-omega25=t(runif(50,min=5,max=13))
+omega25=t(sample(-25:24))
 omega25
 e25=heta_data[[25]][1,]+omega25
 e125=heta_data[[25]][2,]+omega25
@@ -352,7 +352,7 @@ center_colmeans <- function(x) {
 cen_25=center_colmeans(sub25)
 
 #sub-experiment 26
-omega26=t(runif(50,min=-1,max=6))
+omega26=t(sample(-22:27))
 omega26
 e26=heta_data[[26]][1,]+omega26
 e126=heta_data[[26]][2,]+omega26
@@ -366,7 +366,7 @@ center_colmeans <- function(x) {
 cen_26=center_colmeans(sub26)
 
 #sub-experiment 27
-omega27=t(runif(50,min=2,max=10))
+omega27=t(sample(-30:19))
 omega27
 e27=heta_data[[27]][1,]+omega27
 e127=heta_data[[27]][2,]+omega27
@@ -380,7 +380,7 @@ center_colmeans <- function(x) {
 cen_27=center_colmeans(sub27)
 
 #sub-experiment 28
-omega28=t(runif(50,min=8,max=10))
+omega28=t(sample(-8:41))
 omega28
 e28=heta_data[[28]][1,]+omega28
 e128=heta_data[[28]][2,]+omega28
@@ -394,7 +394,7 @@ center_colmeans <- function(x) {
 cen_28=center_colmeans(sub28)
 
 #sub-experiment 29
-omega29=t(runif(50,min=2,max=5))
+omega29=t(sample(-16:33))
 omega29
 e29=heta_data[[29]][1,]+omega29
 e129=heta_data[[29]][2,]+omega29
@@ -408,7 +408,7 @@ center_colmeans <- function(x) {
 cen_29=center_colmeans(sub29)
 
 #sub-experiment 30
-omega30=t(runif(50,min=5,max=8))
+omega30=t(sample(-28:21))
 omega30
 e30=heta_data[[30]][1,]+omega30
 e130=heta_data[[30]][2,]+omega30
@@ -422,7 +422,7 @@ center_colmeans <- function(x) {
 cen_30=center_colmeans(sub30)
 
 #sub-experiment 31
-omega31=t(runif(50,min=0,max=8))
+omega31=t(sample(-7:42))
 omega31
 e31=heta_data[[31]][1,]+omega31
 e131=heta_data[[31]][2,]+omega31
@@ -436,7 +436,7 @@ center_colmeans <- function(x) {
 cen_31=center_colmeans(sub31)
 
 #sub-experiment 32
-omega32=t(runif(50,min=3,max=6))
+omega32=t(sample(-17:32))
 omega32
 e32=heta_data[[32]][1,]+omega32
 e132=heta_data[[32]][2,]+omega32
@@ -450,7 +450,7 @@ center_colmeans <- function(x) {
 cen_32=center_colmeans(sub32)
 
 #sub-experiment 33
-omega33=t(runif(50,min=0,max=4))
+omega33=t(sample(-2:47))
 omega33
 e33=heta_data[[33]][1,]+omega33
 e133=heta_data[[33]][2,]+omega33
@@ -464,7 +464,7 @@ center_colmeans <- function(x) {
 cen_33=center_colmeans(sub33)
 
 #sub-experiment 34
-omega34=t(runif(50,min=3,max=16))
+omega34=t(sample(-50:-1))
 omega34
 e34=heta_data[[34]][1,]+omega34
 e134=heta_data[[34]][2,]+omega34
@@ -478,7 +478,7 @@ center_colmeans <- function(x) {
 cen_34=center_colmeans(sub34)
 
 #sub-experiment 35
-omega35=t(runif(50,min=8,max=11))
+omega35=t(sample(-40:9))
 omega35
 e35=heta_data[[35]][1,]+omega35
 e135=heta_data[[35]][2,]+omega35
@@ -492,7 +492,7 @@ center_colmeans <- function(x) {
 cen_35=center_colmeans(sub35)
 
 #sub-experiment 36
-omega36=t(runif(50,min=-1,max=8))
+omega36=t(sample(-45:4))
 omega36
 e36=heta_data[[36]][1,]+omega36
 e136=heta_data[[36]][2,]+omega36
@@ -506,7 +506,7 @@ center_colmeans <- function(x) {
 cen_36=center_colmeans(sub36)
 
 #sub-experiment 37
-omega37=t(runif(50,min=7,max=11))
+omega37=t(sample(-32:17))
 omega37
 e37=heta_data[[37]][1,]+omega37
 e137=heta_data[[37]][2,]+omega37
@@ -520,7 +520,7 @@ center_colmeans <- function(x) {
 cen_37=center_colmeans(sub37)
 
 #sub-experiment 38
-omega38=t(runif(50,min=3,max=13))
+omega38=t(sample(-55:-6))
 omega38
 e38=heta_data[[38]][1,]+omega38
 e138=heta_data[[38]][2,]+omega38
@@ -534,7 +534,7 @@ center_colmeans <- function(x) {
 cen_38=center_colmeans(sub38)
 
 #sub-experiment 39
-omega39=t(runif(50,min=4,max=12))
+omega39=t(sample(8:57))
 omega39
 e39=heta_data[[39]][1,]+omega39
 e139=heta_data[[39]][2,]+omega39
@@ -548,7 +548,7 @@ center_colmeans <- function(x) {
 cen_39=center_colmeans(sub39)
 
 #sub-experiment 40
-omega40=t(runif(50,min=3,max=5))
+omega40=t(sample(6:55))
 omega40
 e40=heta_data[[40]][1,]+omega40
 e140=heta_data[[40]][2,]+omega40
@@ -562,7 +562,7 @@ center_colmeans <- function(x) {
 cen_40=center_colmeans(sub40)
 
 #sub-experiment 41
-omega41=t(runif(50,min=6,max=16))
+omega41=t(sample(5.5:54.5))
 omega41
 e41=heta_data[[41]][1,]+omega41
 e141=heta_data[[41]][2,]+omega41
@@ -576,7 +576,7 @@ center_colmeans <- function(x) {
 cen_41=center_colmeans(sub41)
 
 #sub-experiment 42
-omega42=t(runif(50,min=11,max=13))
+omega42=t(sample(10.5:59.5))
 omega42
 e42=heta_data[[42]][1,]+omega42
 e142=heta_data[[42]][2,]+omega42
@@ -590,7 +590,7 @@ center_colmeans <- function(x) {
 cen_42=center_colmeans(sub42)
 
 #sub-experiment 43
-omega43=t(runif(50,min=4,max=6))
+omega43=t(sample(7.5:56.5))
 omega43
 e43=heta_data[[43]][1,]+omega43
 e143=heta_data[[43]][2,]+omega43
@@ -604,7 +604,7 @@ center_colmeans <- function(x) {
 cen_43=center_colmeans(sub43)
 
 #sub-experiment 44
-omega44=t(runif(50,min=5,max=15))
+omega44=t(sample(3.5:52.5))
 omega44
 e44=heta_data[[44]][1,]+omega44
 e144=heta_data[[44]][2,]+omega44
@@ -618,7 +618,7 @@ center_colmeans <- function(x) {
 cen_44=center_colmeans(sub44)
 
 #sub-experiment 45
-omega45=t(runif(50,min=6,max=7))
+omega45=t(sample(-1.5:47.5))
 omega45
 e45=heta_data[[45]][1,]+omega45
 e145=heta_data[[45]][2,]+omega45
@@ -632,7 +632,7 @@ center_colmeans <- function(x) {
 cen_45=center_colmeans(sub45)
 
 #sub-experiment 46
-omega46=t(runif(50,min=9,max=11))
+omega46=t(sample(-10.5:38.5))
 omega46
 e46=heta_data[[46]][1,]+omega46
 e146=heta_data[[46]][2,]+omega46
@@ -646,7 +646,7 @@ center_colmeans <- function(x) {
 cen_46=center_colmeans(sub46)
 
 #sub-experiment 47
-omega47=t(runif(50,min=2,max=6))
+omega47=t(sample(6.5:55.5))
 omega47
 e47=heta_data[[47]][1,]+omega47
 e147=heta_data[[47]][2,]+omega47
@@ -660,7 +660,7 @@ center_colmeans <- function(x) {
 cen_47=center_colmeans(sub47)
 
 #sub-experiment 48
-omega48=t(runif(50,min=3,max=9))
+omega48=t(sample(-5.5:43.5))
 omega48
 e48=heta_data[[48]][1,]+omega48
 e148=heta_data[[48]][2,]+omega48
@@ -674,7 +674,7 @@ center_colmeans <- function(x) {
 cen_48=center_colmeans(sub48)
 
 #sub-experiment 49
-omega49=t(runif(50,min=9,max=13))
+omega49=t(sample(4.5:53.5))
 omega49
 e49=heta_data[[49]][1,]+omega49
 e149=heta_data[[49]][2,]+omega49
@@ -688,7 +688,7 @@ center_colmeans <- function(x) {
 cen_49=center_colmeans(sub49)
 
 #sub-experiment 50
-omega50=t(runif(50,min=3,max=11))
+omega50=t(sample(-3.5:45.5))
 omega50
 e50=heta_data[[50]][1,]+omega50
 e150=heta_data[[50]][2,]+omega50
@@ -712,9 +712,9 @@ center_corr
 #network
 center_corr[center_corr<0.9] <- 0
 center_corr[center_corr>=0.9] <- 1
-dev.off()
 corrplot(center_corr , addCoef.col="pink",number.cex=0.55)
 network <- graph_from_adjacency_matrix( center_corr, weighted=T, mode="undirected", diag=F)
+
 dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(network,vertex.size=12,
@@ -743,6 +743,7 @@ wc_corr[wc_corr>=0.9] <- 1
 dev.off()
 corrplot(wc_corr , addCoef.col="pink",number.cex=0.55)
 wc_network <- graph_from_adjacency_matrix( wc_corr, weighted=T, mode="undirected", diag=F)
+
 dev.off()
 par(bg="black", mar=c(0,0,0,0))
 plot(wc_network,vertex.size=12,
